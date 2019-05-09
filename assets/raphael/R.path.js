@@ -59,8 +59,11 @@ var PathDefine = {
         this.init();
 
         if (!this.ctx) {
-            this.ctx = new _ccsg.GraphicsNode();
-            this.node._sgNode.addChild(this.ctx);
+            let node = new cc.Node();
+            this.ctx = node.addComponent(cc.Graphics);
+            this.node.addChild(node);
+            //this.ctx = new _ccsg.GraphicsNode();
+            //this.node._sgNode.addChild(this.ctx);
 
             this._applyStyle();
         }

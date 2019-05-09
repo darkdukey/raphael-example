@@ -128,10 +128,10 @@ var Transform = {
 
         for (var i = 0, ii = cmd.length / 2; i < ii; i++) {
             var j = i*2;
-            tempPoint.x = cmd[j];
-            tempPoint.y = cmd[j + 1];
-
-            tempPoint = cc.pointApplyAffineTransform(tempPoint, t);
+            //x = cmd[j];
+            //y = cmd[j + 1];
+            
+            cc.AffineTransform.transformVec2(tempPoint, cmd[j], cmd[j+1], t);
 
             cmd[j] = tempPoint.x;
             cmd[j+1] = tempPoint.y;
