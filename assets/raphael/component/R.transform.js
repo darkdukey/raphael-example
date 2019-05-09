@@ -3,12 +3,10 @@ var Transform = {
 
     properties: {
         _scale: {
-            default: cc.v2(1, 1),
-            type: cc.Vec2
+            default: cc.v2(1, 1)
         },
         _position: {
-            default: cc.v2(0,0),
-            type: cc.Vec2
+            default: cc.v2(0,0)
         },
         _rotation: 0,
         
