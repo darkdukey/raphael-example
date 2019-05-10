@@ -69,8 +69,10 @@ cc.Class({
         this.path.smooth();
 
         this.path.lineWidth = 5;
-        this.path.lineColor = cc.hexToColor(colours[id].s);
-        this.path.fillColor = cc.hexToColor(colours[id].f);
+        var c1 = cc.Color.BLACK;
+        this.path.lineColor = c1.fromHEX(colours[id].s);
+        var c2 = cc.Color.BLACK;
+        this.path.fillColor = c2.fromHEX(colours[id].f);
 
 
         // Create tentacles

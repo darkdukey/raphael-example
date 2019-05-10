@@ -120,7 +120,8 @@ var Style = {
             value = null;
         }
         else if (typeof value === 'string') {
-            value = cc.hexToColor(value);
+            var c = cc.color.BLACK;
+            value = c.fromHEX(value);
         }
 
         return value;

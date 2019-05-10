@@ -18,9 +18,11 @@ function toNumberArray (s) {
 
 function parseStyle (current, name, value) {
     if (name === 'fill') {
-        current.fillColor = value === 'none' ? null : cc.hexToColor(value);
+        var c = cc.Color.BLACK;
+        current.fillColor = value === 'none' ? null : c.fromHEX(value);
     } else if (name === 'stroke') {
-        current.strokeColor = value === 'none' ? null : cc.hexToColor(value);
+        var c = cc.Color.BLACK;
+        current.strokeColor = value === 'none' ? null : c.fromHEX(value);
     } else if (name === 'stroke-width') {
         current.lineWidth = parseFloat(value);
     } else if (name === 'stroke-linejoin') {

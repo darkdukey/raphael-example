@@ -34,8 +34,11 @@ var GroupDefine = {
         this.init();
 
         if (!this.ctx) {
-            this.ctx = new _ccsg.GraphicsNode();
-            this.node._sgNode.addChild(this.ctx);
+            let g = new cc.Node();
+            this.ctx = g.addComponent(cc.Graphics);
+            this.node.addChild(g);
+            //this.ctx = new _ccsg.GraphicsNode();
+            //this.node._sgNode.addChild(this.ctx);
         }
     },
 
