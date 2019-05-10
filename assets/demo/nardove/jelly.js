@@ -107,7 +107,7 @@ cc.Class({
 
         // Rotation alignment
         var orientation = -(Math.atan2(this.velocity.y, this.velocity.x) - Math.PI/2);
-        this.path.rotation = cc.radiansToDegrees(orientation);
+        this.path.rotation = cc.misc.radiansToDegrees(orientation);
 
         // Expansion Contraction
         for (var i = 0; i < this.pathSides; i++) {
