@@ -182,10 +182,9 @@ var Transform = {
 
     getWorldTransform: function () {
         if (this.parent) {
-            //var out = cc.AffineTransform.identity();
-            //cc.AffineTransform.concat(out, this.parent.getWorldTransform(), this.getTransform());
-            return cc.affineTransformConcat(this.parent.getWorldTransform(), this.getTransform());
-            //return out;
+            var out = cc.AffineTransform.identity();
+            cc.AffineTransform.concat(out, this.parent.getWorldTransform(), this.getTransform());
+            return out;
         }
 
         return this.getTransform();
